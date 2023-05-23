@@ -3,7 +3,7 @@ from os import path, environ, listdir
 from catboost import CatBoostRegressor
 
 app = Flask(__name__)
-PORT = int(environ.get("PORT", 8080))
+PORT = int(environ.get("PORT", 80))
 
 
 data_dir = environ.get("MODEL_DIR", "data/models")
