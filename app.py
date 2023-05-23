@@ -3,7 +3,7 @@ from os import path, environ, listdir
 from catboost import CatBoostRegressor
 
 app = Flask(__name__)
-PORT = int(environ.get("PORT", 80))
+PORT = int(environ.get("PORT", 8080))
 
 
 data_dir = environ.get("MODEL_DIR", "models")
@@ -39,7 +39,7 @@ def predict():
     print(type(vol), vol)
     print(type(close), close)
 
-    return str(model.predict([vol, close]))
+    return str(int(model.predict([vol, close])))
 
 
 if __name__ == "__main__":
