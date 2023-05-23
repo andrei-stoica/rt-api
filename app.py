@@ -6,7 +6,7 @@ app = Flask(__name__)
 PORT = int(environ.get("PORT", 80))
 
 
-data_dir = environ.get("MODEL_DIR", "data/models")
+data_dir = environ.get("MODEL_DIR", "models")
 print(data_dir)
 models = listdir(data_dir)
 models.sort()
