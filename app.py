@@ -34,7 +34,7 @@ def predict():
         vol = int(vol)
         close = int(close)
     except (ValueError, TypeError) as e:
-        abort(400, description="Missing or malformed parmeters")
+        abort(400, description="Missing or malformed parameters")
 
     print(type(vol), vol)
     print(type(close), close)
