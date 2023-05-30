@@ -16,7 +16,13 @@ flask run --debug
 ```
 
 To run production server
-```
+```sh
 gunicorn app:app
 ```
 A version of this site is hosted at [https://rt-ws.andreistoica.ca/predict](https://rt-ws.andreistoica.ca/predict?vol_moving_avg=12345&adj_close_rolling_med=25)
+
+### Testing
+Running tests
+```sh
+pytest
+```

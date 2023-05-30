@@ -7,7 +7,6 @@ PORT = int(environ.get("PORT", 8080))
 
 
 data_dir = environ.get("MODEL_DIR", "models")
-print(data_dir)
 models = listdir(data_dir)
 models.sort()
 
@@ -35,9 +34,6 @@ def predict():
         close = int(close)
     except (ValueError, TypeError) as e:
         abort(400, description="Missing or malformed parameters")
-
-    print(type(vol), vol)
-    print(type(close), close)
 
     return str(int(model.predict([vol, close])))
 

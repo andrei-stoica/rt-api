@@ -10,6 +10,7 @@ import app as rt_api
 def app():
     return rt_api.app
 
+
 @pytest.fixture()
 def model():
     return rt_api.model
